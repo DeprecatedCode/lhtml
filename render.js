@@ -14,7 +14,20 @@ module.exports = function(lhtml) {
 	 * @author Nate Ferrero
 	 */
 	lhtml.render = function(file, scope, callback) {
-		console.log("LHTML Scope: ", scope);
-		callback("Found LHTML file to render at: " + file);
+		console.log("Rendering LHTML File:", file);
+
+		/**
+		 * Read file and parse
+		 * @author Nate Ferrero
+		 */
+		fs.readFile(file, 'utf8', function(error, string) {
+			if(error)
+				return callback(error, null);
+			lhtml.parse(string, function(stack) {
+				console.log("LHTML Scope: ", scope);
+				console.log("LHTML Stack: ", stack);
+				return callback(null, "Found LHTML file to render at: " + file);
+			});
+		});
 	}
 }

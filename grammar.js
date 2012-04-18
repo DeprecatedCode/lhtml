@@ -4,6 +4,9 @@
  * @author Nate Ferrero
  */
 module.exports = {
+
+	// Default Context
+	'--default-context'	: 'default',
 	
 	// _
 	'default' 			: {	'<' : 'tag-start' 				},
@@ -126,14 +129,14 @@ module.exports = {
 			},
 		
 			/* For Later?
-					
-					'default'		: {
-						'</script>'	: '!default',
-						'//'		: 'cdata-line-comment',
-						'/*'		: 'cdata-block-comment',
-						'"' 		: 'cdata-string-double',
-						"'" 		: 'cdata-string-single'
-					}
+				
+				'default'		: {
+					'</script>'	: '!default',
+					'//'		: 'cdata-line-comment',
+					'/*'		: 'cdata-block-comment',
+					'"' 		: 'cdata-string-double',
+					"'" 		: 'cdata-string-single'
+				}
 			},*/
 					
 			// <other...>_
