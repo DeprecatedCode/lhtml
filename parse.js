@@ -9,8 +9,7 @@ module.exports = function(lhtml) {
 	 * @author Nate Ferrero
 	 */
 	var grammar 	= require('./grammar.js'),
-		lexer 		= require('lexer'),
-		fs 			= require('fs');
+		lexer 		= require('lexer');
 
 	/**
 	 * Parse Method

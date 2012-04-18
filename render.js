@@ -5,6 +5,12 @@
 module.exports = function(lhtml) {
 
 	/**
+	 * Dependencies
+	 * @author Nate Ferrero
+	 */
+	var fs = require('fs');
+
+	/**
 	 * Render Method
 	 * 
 	 * @param File
